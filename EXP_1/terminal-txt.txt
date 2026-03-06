@@ -1,0 +1,109 @@
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1
+$ mkdir git-dvcs
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1
+$ cd git-dvcs/
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-dvcs
+$ git config --global user.name "Vansh"
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-dvcs
+$ git config --global user.email "vansh@outlook.com"
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-dvcs
+$ git config --global --list
+user.name=Vansh
+user.email=vansh@outlook.com
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-dvcs
+$ cd ..
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1
+$ mkdir git-demo-project
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1
+$ cd git-demo-project/
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project
+$ git init
+Initialized empty Git repository in C:/Users/15L/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project/.git/
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project (master)
+$ git add .
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+        new file:   README.md
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project (master)
+$ git commit -m "First Commit"
+[master (root-commit) 02af20b] First Commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project (master)
+$ git commit -am "Express Commit"
+On branch master
+nothing to commit, working tree clean
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project (master)
+$ touch teststatus
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project (master)
+$ nano index.html
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project (master)
+$ git add index.html
+$ git add teststatus
+$ git commit -am "Express commit"
+
+[master 2713264] Express commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 teststatus
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project (master)
+$ git log
+commit 2713264499b4908b21e001fdba97f0534b658d4e (HEAD -> master)
+Author: Vansh <vansh@outlook.com>
+Date:   Fri Jan 23 13:42:02 2026 +0530
+
+    Express commit
+
+commit 02af20b8bd517849f6763b1b37e92578a6c789e7
+Author: Vansh <vansh@outlook.com>
+Date:   Fri Jan 23 13:40:15 2026 +0530
+
+    First Commit
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project (master)
+$ git log --oneline
+2713264 (HEAD -> master) Express commit
+02af20b First Commit
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project (master)
+$ git remote add origin https://github.com/vansh/git-demo-project.git
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project (master)
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/vansh/git-demo-project.git
+  Push  URL: https://github.com/vansh/git-demo-project.git
+  HEAD branch: (unknown)
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project (master)
+$ git push -u origin master
+branch 'master' set up to track 'origin/master'.
+
+Vansh@HP-Victus-15L MINGW64 ~/OneDrive/Documents/SEM 6 LAB WORK/SEPM/EXP1/git-demo-project (master)
+$ git pull
+Already up to date.
